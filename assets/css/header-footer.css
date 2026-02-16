@@ -62,3 +62,57 @@ footer {
 footer a {
     color: #ffffff;
 }
+
+/* ============================= */
+/* RESPONSIVE MOBILE */
+/* ============================= */
+
+@media screen and (max-width: 768px) {
+
+    /* ================= HEADER ================= */
+
+    header {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 10px;
+        gap: 8px;
+        height: 80px;
+    }
+
+    /* Nom centré */
+    header > a {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    /* Soleil en position absolue à droite */
+    .header-right {
+        position: static;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-right img {
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        width: 24px;
+        cursor: pointer;
+    }
+
+    /* Réseaux en dessous */
+    .reseaux {
+        width: 100%;
+    }
+
+    .reseaux ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 5px;
+    }
+}
