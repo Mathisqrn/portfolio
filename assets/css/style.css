@@ -205,6 +205,11 @@ main #bandeau img {
     gap: 60px;
 }
 
+#presentation .texte-presentation .texte {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
 #presentation .texte-presentation .cards {
     display: flex;
     justify-content: space-between;
@@ -443,5 +448,6 @@ main #bandeau img {
 #contact .contact a {
     color: #ffffff;
 }
+
 
 
