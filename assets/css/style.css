@@ -471,7 +471,7 @@ main #bandeau img {
     /* ================= BANDEAU ================= */
 
     #bandeau h1 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     #bandeau h2 {
@@ -571,3 +571,4 @@ main #bandeau img {
     }
 
 }
+
