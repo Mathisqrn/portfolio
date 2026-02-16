@@ -1,0 +1,447 @@
+/* INITIALISATION  ET BASE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    padding-top: 75px;
+}
+
+
+h2 {
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+section {
+    scroll-margin-top: 80px; /* hauteur du header */
+}
+
+#presentation  {
+        min-height: 100vh;
+}
+
+#projets , #competences{
+    min-height: 75vh;
+}
+
+#parcours,  #contact {
+    min-height: 50vh;
+}
+
+a:focus-visible {
+    outline: 3px solid #7469A6;
+    outline-offset: 4px;
+}
+
+
+/* NAVIGATION ASIDE */
+
+aside {
+    background-color: #F0CD8C;
+    width: 48px;
+    height: 300px;
+    border-radius: 20px;
+    border: #C89E54 solid 1px;
+
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Centre verticalement */
+    margin-right: 10px;
+}
+
+aside nav {
+    height: 100%;
+}
+
+aside nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    height: 100%;
+}
+
+aside nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+aside nav a.active {
+    background-color: #C89E54;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+aside nav img {
+    width: 25px;
+    margin: 5px;
+}
+
+aside nav a.active img {
+    transform: scale(1.1);
+}
+
+aside nav img {
+    transition: transform 0.3s ease;
+}
+
+
+/* SECTION BANDEAU */
+
+main #bandeau {
+    width: 100%;
+}
+
+#bandeau {
+    position: relative;
+    overflow: hidden;
+}
+
+
+main #bandeau img {
+    width: 100%;
+    min-height: 100%;
+}
+
+/* Titres centrés par-dessus */
+#bandeau h1,
+#bandeau h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+}
+
+/* Position verticale */
+#bandeau h1 {
+    top: 45%;
+    font-size: 3rem;
+}
+
+#bandeau h2 {
+    top: 55%;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+
+/* SECTION PRESENTATION */
+
+#presentation {
+    display: flex;
+    justify-content: space-around;
+    min-height: 100vh;
+    align-items: center;
+}
+
+#presentation .card-presentation {
+    width: 225px;
+    height: 450px;
+    background-color: #F0CD8C;
+    border: #C89E54 solid 1px;
+    border-radius: 25px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 40px;
+}
+
+#presentation .card-presentation img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: #000 solid 1px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+#presentation .card-presentation .bold {
+    font-size: 16px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+#presentation .card-presentation hr {
+    width: 45px;
+    background-color: #7469A6;
+    color: #7469A6;
+    margin-bottom: 40px;
+}
+
+#presentation .card-presentation .light {
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+#presentation .texte-presentation {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+#presentation .texte-presentation .cards {
+    display: flex;
+    justify-content: space-between;
+} 
+
+.card-dev-web , .card-entreprenariat {
+    width: 200px;
+    height: 150px;
+    border-radius: 15px;
+    background-color: #C89E54;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.card-dev-web img, .card-entreprenariat img {
+    width: 70px;
+}
+
+
+/* SECTION COMPETENCES */
+
+#competences h2 {
+    margin-bottom: 60px;
+}
+
+#competences .cards {
+        display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+}
+
+#competences .cards .card-web, #competences .cards .card-autres {
+    width: 315px;
+    height: 400px;
+    background-color: #C89E54;
+    border: #000 solid 1px;
+    border-radius: 15px;
+} 
+
+#competences .cards .card-web h3, #competences .cards .card-autres h3 {
+    text-align: center;
+    background-color: #F0CD8C;
+    border-radius:15px 15px 0px 0px;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#competences li {
+    position: relative;
+    list-style: none;
+    height: 50px;
+    margin: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.skill-name {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.skill-bar {
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    width: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: width 0.4s ease;
+
+    border-radius: 8px;
+    background: linear-gradient(90deg, #C89E54, #000);
+
+}
+
+.skill-percent {
+    opacity: 0;
+    transform: translateY(5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#competences li:hover .skill-percent {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+#competences li:hover .skill-name {
+    opacity: 0;
+}
+
+#competences li:hover .skill-bar {
+    width: var(--level);
+}
+
+
+
+/* SECTION PARCOURS */ 
+
+#parcours {
+    padding: 4rem 2rem;
+}
+
+#parcours h2 {
+    margin-bottom: 60px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #C89E54;
+}
+
+.timeline-item {
+    margin-bottom: 3rem;
+    padding-left: 40px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background: #F0CD8C;
+    border-radius: 50%;
+}
+
+
+
+/* SECTION PROJETS */
+
+#projets {
+    padding: 2rem 1rem;
+}
+
+#projets h2 {
+    margin-bottom: 60px;
+}
+
+#projets .grid-project {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(450px, 1fr));
+    gap: 3rem;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.grid-project a {
+    text-decoration: none;
+}
+
+.card-project {
+    background-color: #F0CD8C;
+    color: #000;
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    min-height: 200px;
+    padding: 20px;
+}
+
+
+.card-project:hover {
+    transform: scale(1.03);
+}
+
+
+.card-project img {
+    width: 40%;
+    object-fit: cover;
+}
+
+
+.card-project-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+}
+
+.card-project-info h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+/* SECTION CONTACT */
+
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .contact h2 {
+    margin-bottom: 15px;
+}
+
+#contact .contact {
+    background-color: #F0CD8C;
+    border: #C89E54 solid 1px;
+    border-radius: 25px;
+    width: fit-content;
+    padding: 20px 40px;
+}
+
+#contact .contact a {
+    color: #ffffff;
+}
+
+
