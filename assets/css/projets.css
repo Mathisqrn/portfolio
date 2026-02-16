@@ -143,4 +143,49 @@ html {
     .project-block {
         padding: 25px;
     }
+
+    
+    .project-image img {
+        width: 300px;
+    }
+}
+
+/* ============================= */
+/* DARK MODE */
+/* ============================= */
+
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #C89E54;
+}
+
+
+body.dark-mode header {
+        background-color: #121212;
+        color: #ffffff;
+}
+
+body.dark-mode header .header-right .reseaux a {
+    color: #ffffff;
+}
+body.dark-mode header #theme-toggle #theme-icon {
+    color: #ffffff;
+}
+
+body.dark-mode h1 {
+    color: #C89E54;
 }
