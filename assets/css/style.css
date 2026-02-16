@@ -205,6 +205,12 @@ main #bandeau img {
     gap: 60px;
 }
 
+#presentation .texte-presentation .texte {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 #presentation .texte-presentation .cards {
     display: flex;
     justify-content: space-between;
@@ -445,3 +451,123 @@ main #bandeau img {
 }
 
 
+
+/* ============================= */
+/* RESPONSIVE MOBILE */
+/* ============================= */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        padding-bottom: 80px;
+    }
+
+    main {
+        padding-top: 0;
+    }
+
+    
+
+    /* ================= BANDEAU ================= */
+
+    #bandeau h1 {
+        font-size: 24px;
+    }
+
+    #bandeau h2 {
+        font-size: 14px;
+    }
+
+    /* ================= PRESENTATION ================= */
+
+    #presentation {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 40px;
+        text-align: center;
+        padding: 32px 16px;
+    }
+
+    #presentation .texte-presentation {
+        width: 100%;
+        gap: 30px;
+    }
+
+    #presentation .texte-presentation .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* ================= COMPETENCES ================= */
+
+    #competences .cards {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* ================= PROJETS ================= */
+
+    #projets .grid-project {
+        grid-template-columns: 1fr;
+    }
+
+    .card-project {
+        flex-direction: column;
+    }
+
+    .card-project img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .card-project-info {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    /* ================= CONTACT ================= */
+
+    #contact {
+        padding: 32px 16px;
+    }
+
+    /* ================= TIMELINE ================= */
+
+    .timeline::before {
+        left: 5px;
+    }
+
+    .timeline-item {
+        padding-left: 30px;
+    }
+
+    /* ================= ASIDE NAVIGATION ================= */
+
+    aside {
+        width: 90%;
+        height: 60px;
+        bottom: 10px;
+        top: auto;
+        right: 50%;
+        transform: translateX(50%);
+        border-radius: 30px;
+    }
+
+    aside nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+    }
+
+    aside nav a {
+        width: 35px;
+        height: 35px;
+    }
+
+    aside nav img {
+        width: 20px;
+    }
+
+}
