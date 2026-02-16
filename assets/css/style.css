@@ -209,6 +209,7 @@ main #bandeau img {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
 
 #presentation .texte-presentation .cards {
     display: flex;
@@ -448,6 +449,7 @@ main #bandeau img {
 #contact .contact a {
     color: #ffffff;
 }
+
 
 
 
