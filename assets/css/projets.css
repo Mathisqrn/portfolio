@@ -126,6 +126,27 @@ html {
     transform: scaleX(1);
 }
 
+.text-bouton {
+    display: flex;
+    gap: 15px;
+}
+
+.text-bouton button {
+    width: 120px;
+    height: 25px;
+    text-align: center;
+    border-radius: 25px;
+    background-color: #ffffff;
+    color: #C89E54;
+    cursor: pointer;
+}
+
+.text-bouton button:hover {
+    background-color: #2D5A3D;
+    color: #D4713A;
+}
+
+
 @media (max-width: 768px) {
 
     .project-article {
